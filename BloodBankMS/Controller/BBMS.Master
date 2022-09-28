@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BBMS.master.cs" Inherits="BloodBankMS.Model.BBMS" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="../View/Master.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header class="head" style="margin-bottom:0px;">
+                <h1 style="background-color: #FFFFFF; line-height: 50px; padding-top: 20px; padding-bottom: 20px;">BLOOD BANK MANAGEMENT SYSTEM</h1>
+            </header>
+
+            <div class="divide" style="display: flex">
+                    <nav>
+                            <asp:LinkButton ID="Donorlb" runat="server" Font-Underline="False" style="padding-left:30px;padding-top: 10px;padding-bottom:0px;font-size: 25px;" ForeColor="Black" OnClick="Donorb_Click1" BackColor="#666666" Width="250px" CausesValidation="False">Donor</asp:LinkButton>
+                        
+                        
+                            <br />
+                        
+                        
+                            <asp:LinkButton ID="Donatelb" runat="server" Font-Underline="False" style="padding-left:30px;font-size: 25px;" ForeColor="Black" BackColor="#666666" Width="250px" CausesValidation="False" OnClick="Donatelb_Click">Donate</asp:LinkButton>
+                        
+                        
+                            <br />
+                        
+                        
+                            <asp:LinkButton ID="ViewDonorslb" runat="server" Font-Underline="False" style="padding-left:30px;font-size: 25px;" ForeColor="Black" BackColor="#666666" Width="250px" CausesValidation="False" OnClick="ViewDonorslb_Click">View Donors</asp:LinkButton>
+                        
+                        
+                            <br />
+                        
+                        
+                            <asp:LinkButton ID="Patientlb" runat="server" Font-Underline="False" style="padding-left:30px;font-size: 25px;" ForeColor="Black" BackColor="#666666" Width="250px" CausesValidation="False" OnClick="Patientlb_Click">Patient</asp:LinkButton>
+                        
+                        
+                            <br />
+                        
+                        
+                            <asp:LinkButton ID="ViewPatientslb" runat="server" Font-Underline="False" style="padding-left:30px;font-size: 25px;" ForeColor="Black" BackColor="#666666" Width="250px" CausesValidation="False" OnClick="ViewPatientslb_Click">View Patients</asp:LinkButton>
+                        
+                        
+                            <br />
+                        
+                        
+                            <asp:LinkButton ID="BloodTransferlb" runat="server" Font-Underline="False" style="padding-left:30px;font-size: 25px;" ForeColor="Black" BackColor="#666666" Width="250px" CausesValidation="False" OnClick="BloodTransferlb_Click">Blood Transfer</asp:LinkButton>
+                        
+                        
+                            <br />
+                        
+                        
+                            <asp:LinkButton ID="BloodStocklb" runat="server" Font-Underline="False" style="padding-left:30px;font-size: 25px;" ForeColor="Black" BackColor="#666666" Width="250px" CausesValidation="False" OnClick="BloodStocklb_Click">Blood Stock</asp:LinkButton>
+                        
+                        
+                            <br />
+                        
+                        
+                            <asp:LinkButton ID="Dashboardlb" runat="server" Font-Underline="False" style="padding-left:30px;font-size: 25px;" ForeColor="Black" BackColor="#666666" Width="250px" CausesValidation="False" OnClick="Dashboardlb_Click">Dashboard</asp:LinkButton>
+                        
+                        
+                            &nbsp;
+                        
+                        
+                            <br />
+                        
+                        
+                            <asp:LinkButton ID="LogOutlb" runat="server" Font-Underline="False" style="text-align:left; padding-left:30px; padding-bottom: 170px;font-size: 25px; " ForeColor="Black" BackColor="#666666" Width="250px" CausesValidation="False" OnClick="LogOutlb_Click">Log Out</asp:LinkButton>
+                        
+                            <br />
+                        
+                    </nav>
+                
+            <section>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+        </div>
+        </div>
+        <footer>
+            <p style="margin-bottom:0px;text-align:center ;background-color: #FF6699; line-height: 25px;  font-size: 21px; font-weight: bolder; font-style: italic; text-transform: capitalize; color: #FFFFFF; position: fixed; bottom: 0; width: 100%;">&copy;Dishil Purswani</p>
+        </footer>
+    </form>
+</body>
+</html>

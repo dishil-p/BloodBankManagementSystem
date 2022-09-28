@@ -1,0 +1,22 @@
+﻿
+*{
+    background-color: cyan;
+}
+
+.head {
+    text-align:center;
+    
+    /*background-color: green;*/
+}
+/*cadetblue, crimson, grey;*/
+.navbar {
+    /*background-color: #666666;*/
+    width: 250px;
+}
+
+
+
+#Donorlb, #Donatelb, #ViewDonorslb, #Patientlb, #ViewPatientslb, #BloodTransferlb, #BloodStocklb, #Dashboardlb, #LogOutlb {
+    /*margin:5px 0px;*/
+}
+    

@@ -1,0 +1,23 @@
+﻿body {
+    background-color: cyan;
+}
+
+h1,h2 {
+    text-align:center;
+}
+
+.formArea {
+    margin-left:40%;
+}
+
+#loginBtn {
+    margin-left: 90px;
+    border-radius: 10px;
+    padding:10px 20px;
+    border: 2px solid;
+}
+
+#adminBtn {
+    margin-left: 65px;
+    padding: 5px 20px;
+}
