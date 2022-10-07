@@ -1,0 +1,89 @@
+MODULES
+1.	Login Module
+2.	Admin Module
+3.	Dashboard Module
+4.	Donor Module
+5.	View Donors Module
+6.	Donate Module
+7.	Patient Module
+8.	View Patients Module
+9.	Blood Stock Module
+10.	Blood Transfer Module
+
+1) Login Module
+•	This module ensures that only authorized people can view and manipulate data stored. All the registered users will get a login id and password from Admin. 
+•	It has 2 separate types of login options. One for the admin who controls the adding and removing of employees. Another is for the employee working in the blood bank who would be responsible for handling donors’ and patients’ data. 
+2) Admin Module
+•	It is the dashboard for the Admin. Admin is a person who is responsible for maintaining the users’(employees’) data.
+•	The admin has the authorization to save details of new employee, edit its name and password or delete an user’s data.
+3) Dashboard Module
+•	This module allows to view statistical data like number of donors,  number of registered users and current blood stock available for each blood group.
+•	It also displays the details of blood transfers made in the form of a graph. It is the first page where the user gets directed after login page.
+4) Donor  Module
+•	This module allows to add the details of a new donor.
+•	Details of a donor include name, age, gender, phone number, blood group and address of the donor.
+5) View Donors Module
+•	This module allows to see the list of registered donors.
+•	It also allows to edit or delete the details of selected donor.
+6) Donate Module 
+•	This module allows to maintain the donations done by registered donors. 
+•	Moreover, it provides option to filter the Donors table data on the basis of blood group.
+7) Patient Module
+•	This module allows to maintain registration of the new patients who require blood. 
+•	Stores the name, age, gender, phone number, blood group and address of the patient.
+8) View Patients Module
+•	This module allows to view, edit and remove the details of a registered patient from the database.
+9) Blood Stock Module
+•	This module allows to view current stock of each blood group available.
+•	This list is grouped according to each blood group and can be filtered on the basis of it.
+10) Blood Transfer Module
+•	This module allows to maintain the data of blood donated to a needy patient.
+•	Firstly, it checks that required blood group is available or not on the basis of patient id entered. If it is not available then it informs about unavailability of stock. But, if the blood stock is available, then transfer button is enabled to store the blood transfer details and update the blood stock.
+11) Log Out Module
+•	This module allows users or admin to Log Out and redirects them to Log In page.
+
+Database Schema
+
+1.	Donor Table –
+This table is used to manage the details of donors. Its definition is represented in the form of table below:- 
+Field Name	Data Type	Constraints
+DId	int	Primary Key, Identity
+DName	varchar(50)	Not null
+DAge	int	Not null
+DGender	varchar(10)	Not null
+DPhone	varchar(50)	Not null
+DAddress	varchar(50)	Not null
+DBGroup	varchar(5)	Not null
+
+
+2.	Patient Table –
+This table is used to manage the details of patients. Its definition is represented in the form of table below:- 
+Field Name	Data Type	Constraints
+PId	int	Primary Key, Identity
+PName	varchar(50)	Not null
+PAge	int	Not null
+PGender	varchar(10)	Not null
+PPhone	varchar(50)	Not null
+PAddress	varchar(50)	Not null
+PBGroup	varchar(5)	Not null
+
+
+3.	Transfer Table –
+This table is used to manage the blood transfer details made. Its definition is represented in the form of table below:- 
+Field Name	Data Type	Constraints
+TNum	int	Primary Key, identity
+PName	varchar(50)	Not null
+BGroup	varchar(50)	Not null
+
+4.	Blood Table –
+This table is used to manage the blood transfer details made. Its definition is represented in the form of table below:- 
+Field Name	Data Type	Constraints
+BGroup	varchar(5)	Primary Key
+BStock	int	Not Null
+
+5.	Employee Table –
+This table is used to manage the details of the employees or the authorized users who can use this application. Its definition is represented in the form of table below:- 
+Field Name	Data Type	Constraints
+EmpId	int	Primary Key
+EmpName	varchar(50)	Not null
+EmpPass	varchar(50)	Not null
